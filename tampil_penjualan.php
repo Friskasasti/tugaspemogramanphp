@@ -1,4 +1,16 @@
-DOCTYPE html>
+<?php 
+session_start();
+if(!isset($_SESSION['session_username'])){
+    header("location:login.php");
+    exit();
+}
+
+?>
+
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>tampil_penjualan</title>

@@ -1,3 +1,15 @@
+<?php 
+session_start();
+if(!isset($_SESSION['session_username'])){
+    header("location:login.php");
+    exit();
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +18,7 @@
 <body>
     <h2>Pemograman 1 2023</h2>
     <br>
-    <a href="tambah_member.php">+ Tambah member</a>
+    <a href="tampil_member.php">+ Tambah member</a>
     <br>
     <table border="1">
         <tr>
