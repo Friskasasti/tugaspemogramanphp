@@ -8,7 +8,6 @@ if(!isset($_SESSION['session_username'])){
 ?>
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,15 +20,10 @@ if(!isset($_SESSION['session_username'])){
     <br>
     <table border="1">
         <tr>
-            <th>Id</th>
-            <th>Tanggal Transaksi</th>
-            <th>No Transaksi</th>
-            <th>Jenis Transaksi</th>
-             <th>penjualan id</th>
+        <th>Jenis Transaksi</th>
             <th>Id Barang</th>
             <th>Jumlah Transaksi</th>
-            <th>member Id </th>
-             <th>Total</th>
+            <th>Id User</th>
         </tr>
         <?php
             include 'koneksi.php';
@@ -37,8 +31,8 @@ if(!isset($_SESSION['session_username'])){
             $data = mysqli_query($koneksi,"Select * From transaksi");
             while($d = mysqli_fetch_array($data)){
         ?>
- <tr>
-            <td><?php echo $no++; ?></td>
+        <tr>
+        <td><?php echo $no++; ?></td>
             <td><?php echo $d['tgl_transaksi'];?></td>
             <td><?php echo $d['no_transaksi'];?></td>
             <td><?php echo $d['jenis_transaksi'];?></td>
@@ -47,8 +41,7 @@ if(!isset($_SESSION['session_username'])){
             <td><?php echo $d['jumlah_transaksi'];?></td>
             <td><?php echo $d['id_member'];?></td>
             <td><?php echo $d['total'];?></td>
-            <td>
-                <a href="edit_transaksi.php?id=<?php echo $d['id_transaksi']; ?>">Edit</a>
+            <td><a href="edit_transaksi.php?id=<?php echo $d['id_transaksi']; ?>">Edit</a>
                 <a href="hapus_transaksi.php?id=<?php echo $d['id_transaksi']; ?>">Hapus</a>
             </td>
         </tr>
