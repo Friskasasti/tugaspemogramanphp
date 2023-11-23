@@ -165,7 +165,7 @@ if ($_SESSION['level'] == 0) {
         </div>
     </div>
     <footer>
-        very good very well ini punya syifa well
+        DiBuat Oleh Friska Sasti
     </footer>
 
     <!-- Add Bootstrap JS and Popper.js for Bootstrap components that require it -->
